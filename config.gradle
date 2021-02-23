@@ -1,0 +1,21 @@
+ext {
+    android = [
+            compileSdkVersion: 30,
+            minSdkVersion    : 19,
+            targetSdkVersion : 30,
+            buildToolsVersion: "30.0.1",
+            applicationId    : "com.James.godlike",
+            versionName      : "1.0.0",
+            versionCode      : 100
+    ]
+
+    version = [
+            okhttp4  : "4.9.0",
+            retrofit2: "2.9.0"
+    ]
+
+    dependencies = [
+            okhttp  : "com.squareup.okhttp3:okhttp:$version.okhttp4",
+            retrofit: "com.squareup.retrofit2:retrofit:$version.retrofit2"
+    ]
+}
