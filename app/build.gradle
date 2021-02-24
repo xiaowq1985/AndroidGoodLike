@@ -3,6 +3,9 @@ plugins {
 }
 
 android {
+    dataBinding {
+        enabled = true
+    }
     signingConfigs {
         debug {
             storeFile file('D:\\worksapce\\GodLike\\app\\debug.jks')
@@ -39,6 +42,24 @@ android {
                     app_icon: "@mipmap/ic_launcher_icon",
                     app_name: "@string/app_name"
             ]
+            resValue("string", "godlike", "godlike")
+            resValue("bool", "rel", 'true')
+            resValue("integer", "num", '22')
+            buildConfigField("String", "BaseUrl", "\"http://www.jianshu.com\"")
+        }
+
+        innerRelease {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            manifestPlaceholders = [
+                    app_icon: "@mipmap/ic_launcher_icon",
+                    app_name: "@string/app_name"
+            ]
+            resValue("string", "godlike", "godlike")
+            resValue("bool", "rel", 'true')
+            resValue("integer", "num", '22')
+            buildConfigField("String", "BaseUrl", "\"http://www.jianshu.com\"")
         }
 
         debug {
@@ -48,6 +69,10 @@ android {
                     app_icon: "@mipmap/ic_launcher_icon_debug",
                     app_name: "@string/app_name_debug"
             ]
+            resValue("string", "godlike", "ghostlike")
+            resValue("bool", "rel", 'false')
+            resValue("integer", "num", '23')
+            buildConfigField("String", "BaseUrl", "\"https://www.jianshu.com/p/3d9b23afe514\"");
         }
     }
     compileOptions {
