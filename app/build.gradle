@@ -35,11 +35,19 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
+            manifestPlaceholders = [
+                    app_icon: "@mipmap/ic_launcher_icon",
+                    app_name: "@string/app_name"
+            ]
         }
 
         debug {
             applicationIdSuffix ".debug"
             signingConfig signingConfigs.debug
+            manifestPlaceholders = [
+                    app_icon: "@mipmap/ic_launcher_icon_debug",
+                    app_name: "@string/app_name_debug"
+            ]
         }
     }
     compileOptions {

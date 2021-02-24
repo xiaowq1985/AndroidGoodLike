@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">GodLike</string>
+    <string name="app_name_debug">GodLikeDebug</string>
 </resources>
