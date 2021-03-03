@@ -29,13 +29,18 @@ android {
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
     }
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
             manifestPlaceholders = [
@@ -48,19 +53,6 @@ android {
             buildConfigField("String", "BaseUrl", "\"http://www.jianshu.com\"")
         }
 
-        innerRelease {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release
-            manifestPlaceholders = [
-                    app_icon: "@mipmap/ic_launcher_icon",
-                    app_name: "@string/app_name"
-            ]
-            resValue("string", "godlike", "godlike")
-            resValue("bool", "rel", 'true')
-            resValue("integer", "num", '22')
-            buildConfigField("String", "BaseUrl", "\"http://www.jianshu.com\"")
-        }
 
         debug {
             applicationIdSuffix ".debug"
@@ -90,4 +82,8 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation rootProject.ext.dependencies.arouter
+    annotationProcessor rootProject.ext.dependencies.arouterannotationProcessor
+    implementation rootProject.ext.dependencies.arouter
+    annotationProcessor rootProject.ext.dependencies.arouterannotationProcessor
 }
