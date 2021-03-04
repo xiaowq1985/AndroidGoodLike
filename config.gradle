@@ -11,11 +11,14 @@ ext {
 
     version = [
             okhttp4  : "4.9.0",
-            retrofit2: "2.9.0"
+            retrofit2: "2.9.0",
+            arouter  : "1.5.1"
     ]
 
     dependencies = [
-            okhttp  : "com.squareup.okhttp3:okhttp:$version.okhttp4",
-            retrofit: "com.squareup.retrofit2:retrofit:$version.retrofit2"
+            okhttp                    : "com.squareup.okhttp3:okhttp:$version.okhttp4",
+            retrofit                  : "com.squareup.retrofit2:retrofit:$version.retrofit2",
+            arouter                   : "com.alibaba:arouter-api:$version.arouter",
+            arouterannotationProcessor: "com.alibaba:arouter-compiler:$version.arouter"
     ]
 }

@@ -13,7 +13,6 @@ import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.godlike.arouter.ArouterConstance;
 import com.godlike.arouter.IService;
-import com.godlike.arouter.James;
 import com.james.godlike.R;
 import com.james.godlike.databinding.MainActivityBinding;
 
@@ -35,12 +34,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_skip:
-                James james = new James(11, "King");
-                ARouter.getInstance().build(ArouterConstance.AROUTER_PATH)
-                        .withInt("height", 23)
-                        .withParcelable("James", james)
-                        .withTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
-                        .navigation(this, 123);
+//                James james = new James(11, "King");
+//                ARouter.getInstance().build(ArouterConstance.AROUTER_PATH)
+//                        .withInt("height", 23)
+//                        .withParcelable("James", james)
+//                        .withTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
+//                        .navigation(this, 123);
+                ARouter.getInstance().build(ArouterConstance.AROUTER_PATH).navigation();
                 break;
             default:
                 break;
