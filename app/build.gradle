@@ -24,7 +24,7 @@ android {
     buildToolsVersion "30.0.1"
 
     defaultConfig {
-        applicationId "com.James.godlike"
+        applicationId "com.james.godlike"
         minSdkVersion 19
         targetSdkVersion 30
         versionCode 1
@@ -84,6 +84,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation rootProject.ext.dependencies.arouter
     annotationProcessor rootProject.ext.dependencies.arouterannotationProcessor
-    implementation rootProject.ext.dependencies.arouter
-    annotationProcessor rootProject.ext.dependencies.arouterannotationProcessor
+    implementation rootProject.ext.dependencies.eventbus
 }

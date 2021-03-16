@@ -17,6 +17,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="eventbus.EventPrcActivity" />
+        <activity android:name="eventbus.EventPrcActivity2" />
         <activity android:name="com.godlike.arouter.ARouterActivity" />
     </application>
 

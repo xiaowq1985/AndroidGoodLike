@@ -1,4 +1,5 @@
 ext {
+    isLibrarayModule = true;
     android = [
             compileSdkVersion: 30,
             minSdkVersion    : 19,
@@ -12,13 +13,15 @@ ext {
     version = [
             okhttp4  : "4.9.0",
             retrofit2: "2.9.0",
-            arouter  : "1.5.1"
+            arouter  : "1.5.1",
+            eventbus : "3.2.0"
     ]
 
     dependencies = [
             okhttp                    : "com.squareup.okhttp3:okhttp:$version.okhttp4",
             retrofit                  : "com.squareup.retrofit2:retrofit:$version.retrofit2",
             arouter                   : "com.alibaba:arouter-api:$version.arouter",
-            arouterannotationProcessor: "com.alibaba:arouter-compiler:$version.arouter"
+            arouterannotationProcessor: "com.alibaba:arouter-compiler:$version.arouter",
+            eventbus                  : "org.greenrobot:eventbus:$version.eventbus"
     ]
 }
