@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.james.godlike">
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:name="com.godlike.JamesApplication"
         android:allowBackup="true"
@@ -20,6 +21,7 @@
         <activity android:name="eventbus.EventPrcActivity" />
         <activity android:name="eventbus.EventPrcActivity2" />
         <activity android:name="com.godlike.arouter.ARouterActivity" />
+        <activity android:name="com.godlike.rxjava.RxJavaActivity" />
     </application>
 
 </manifest>

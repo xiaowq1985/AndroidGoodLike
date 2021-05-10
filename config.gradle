@@ -11,10 +11,11 @@ ext {
     ]
 
     version = [
-            okhttp4  : "4.9.0",
+            okhttp4  : "3.4.0",
             retrofit2: "2.9.0",
             arouter  : "1.5.1",
-            eventbus : "3.2.0"
+            eventbus : "3.2.0",
+            rxjava   : "3.0.0-RC0"
     ]
 
     dependencies = [
@@ -22,6 +23,7 @@ ext {
             retrofit                  : "com.squareup.retrofit2:retrofit:$version.retrofit2",
             arouter                   : "com.alibaba:arouter-api:$version.arouter",
             arouterannotationProcessor: "com.alibaba:arouter-compiler:$version.arouter",
-            eventbus                  : "org.greenrobot:eventbus:$version.eventbus"
+            eventbus                  : "org.greenrobot:eventbus:$version.eventbus",
+            rxjava                    : "io.reactivex.rxjava3:rxjava:$version.rxjava"
     ]
 }
