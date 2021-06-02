@@ -26,7 +26,7 @@ android {
     defaultConfig {
         applicationId "com.james.godlike"
         minSdkVersion 19
-        targetSdkVersion 30
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -86,4 +86,7 @@ dependencies {
     annotationProcessor rootProject.ext.dependencies.arouterannotationProcessor
     implementation rootProject.ext.dependencies.eventbus
     implementation rootProject.ext.dependencies.rxjava
+    implementation rootProject.ext.dependencies.adapter_rxjava2
+    implementation rootProject.ext.dependencies.converter_gson
+    implementation rootProject.ext.dependencies.gson
 }

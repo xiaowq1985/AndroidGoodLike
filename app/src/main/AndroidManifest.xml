@@ -12,16 +12,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GodLike">
         <activity android:name="com.godlike.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name="eventbus.EventPrcActivity" />
         <activity android:name="eventbus.EventPrcActivity2" />
         <activity android:name="com.godlike.arouter.ARouterActivity" />
-        <activity android:name="com.godlike.rxjava.RxJavaActivity" />
+        <activity android:name="com.godlike.rxjava.RxJavaActivity">
+
+        </activity>
+        <activity android:name="com.godlike.rxjava.lunxun.RxJavafixRxjava">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
