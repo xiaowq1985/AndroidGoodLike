@@ -11,11 +11,14 @@ ext {
     ]
 
     version = [
-            okhttp4  : "3.4.0",
-            retrofit2: "2.9.0",
-            arouter  : "1.5.1",
-            eventbus : "3.2.0",
-            rxjava   : "3.0.0-RC0"
+            okhttp4        : "3.4.0",
+            retrofit2      : "2.9.0",
+            arouter        : "1.5.1",
+            eventbus       : "3.2.0",
+            rxjava         : "3.0.13",
+            adapter_rxjava2: "2.9.0",
+            converter_gson : "2.9.0",
+            gson           : "2.8.7"
     ]
 
     dependencies = [
@@ -24,6 +27,9 @@ ext {
             arouter                   : "com.alibaba:arouter-api:$version.arouter",
             arouterannotationProcessor: "com.alibaba:arouter-compiler:$version.arouter",
             eventbus                  : "org.greenrobot:eventbus:$version.eventbus",
-            rxjava                    : "io.reactivex.rxjava3:rxjava:$version.rxjava"
+            rxjava                    : "io.reactivex.rxjava3:rxjava:$version.rxjava",
+            adapter_rxjava2           : "com.squareup.retrofit2:adapter-rxjava2:$version.adapter_rxjava2",
+            converter_gson            : "com.squareup.retrofit2:converter-gson:$version.converter_gson",
+            gson                      : "com.google.code.gson:gson:$version.gson"
     ]
 }

@@ -6,9 +6,11 @@ import android.util.Log;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import io.reactivex.Observable;
-import io.reactivex.Observer;
-import io.reactivex.disposables.Disposable;
+import com.james.godlike.R;
+
+import io.reactivex.rxjava3.core.Observable;
+import io.reactivex.rxjava3.functions.Consumer;
+import io.reactivex.rxjava3.functions.Predicate;
 
 public class RxJavaActivity extends AppCompatActivity {
     private final String TAG = getClass().getSimpleName();
@@ -16,35 +18,22 @@ public class RxJavaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.main_activity);
         initRxJava();
     }
 
     private void initRxJava() {
-        // 具体使用
-        Observable.just(1, 2, 3, 4)
-                .repeat(3) // 重复创建次数 =- 3次
-                .subscribe(new Observer<Integer>() {
-                    @Override
-                    public void onSubscribe(Disposable d) {
-                        Log.d(TAG, "开始采用subscribe连接");
-                    }
-
-                    @Override
-                    public void onNext(Integer value) {
-                        Log.d(TAG, "接收到了事件" + value);
-                    }
-
-                    @Override
-                    public void onError(Throwable e) {
-                        Log.d(TAG, "对Error事件作出响应");
-                    }
-
-                    @Override
-                    public void onComplete() {
-                        Log.d(TAG, "对Complete事件作出响应");
-                    }
-
-                });
+        Observable.range(1, 10).filter(new Predicate<Integer>() {
+            @Override
+            public boolean test(Integer integer) throws Throwable {
+                return integer < 5;
+            }
+        }).subscribe(new Consumer<Integer>() {
+            @Override
+            public void accept(Integer integer) throws Throwable {
+                Log.e(TAG, integer + "");
+            }
+        });
     }
 }
 
