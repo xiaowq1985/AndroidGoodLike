@@ -9,5 +9,5 @@ import retrofit2.http.HeaderMap;
 
 public interface DynamicHeadersInfoApi {
     @GET("api/dynamicHeadersInfo")
-    Call<ResponseBody> getDynamicHeadersInfo(@HeaderMap Map<String, String> headers);
+    Call<ResponseBody> getDynamicHeadersInfo(@HeaderMap Map<String, String> map);
 }

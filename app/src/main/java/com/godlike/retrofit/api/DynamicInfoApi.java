@@ -7,5 +7,5 @@ import retrofit2.http.Path;
 
 public interface DynamicInfoApi {
     @GET("api/getDynamicInfo/{param}/data")
-    Call<ResponseBody> getDynamicInfo(@Path("path") String param);
+    Call<ResponseBody> getDynamicInfo(@Path("param") String param);
 }
