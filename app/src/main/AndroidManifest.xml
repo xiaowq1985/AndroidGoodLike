@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.james.godlike">
 
-    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:name="com.godlike.JamesApplication"
         android:allowBackup="true"
@@ -11,21 +10,22 @@
         android:roundIcon="${app_icon}"
         android:supportsRtl="true"
         android:theme="@style/Theme.GodLike">
-        <activity android:name="com.godlike.MainActivity">
-
-        </activity>
         <activity android:name="eventbus.EventPrcActivity" />
         <activity android:name="eventbus.EventPrcActivity2" />
         <activity android:name="com.godlike.arouter.ARouterActivity" />
         <activity android:name="com.godlike.rxjava.RxJavaActivity">
+
+        </activity>
+        <activity android:name="com.godlike.rxjava.lunxun.RxJavafixRxjava">
+
+        </activity>
+        <activity android:name="com.godlike.retrofit.RetrofitAct">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.godlike.rxjava.lunxun.RxJavafixRxjava">
-
-        </activity>
     </application>
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

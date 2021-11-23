@@ -79,6 +79,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation rootProject.ext.dependencies.okhttp
     implementation rootProject.ext.dependencies.retrofit
+    implementation 'org.jetbrains:annotations:15.0'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
@@ -89,4 +90,5 @@ dependencies {
     implementation rootProject.ext.dependencies.adapter_rxjava2
     implementation rootProject.ext.dependencies.converter_gson
     implementation rootProject.ext.dependencies.gson
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.50'
 }
